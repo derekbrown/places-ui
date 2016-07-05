@@ -1,22 +1,23 @@
----
 language: node_js
 node_js:
-  - "4"
-
+- '4'
 sudo: false
-
 cache:
   directories:
-    - node_modules
-
+  - node_modules
 before_install:
-  - npm config set spin false
-  - npm install -g bower
-  - npm install phantomjs-prebuilt
-
+- npm config set spin false
+- npm install -g bower
+- npm install phantomjs-prebuilt
 install:
-  - npm install
-  - bower install
-
+- npm install
+- bower install
 script:
-  - npm test
+- npm test
+deploy:
+  provider: heroku
+  api_key:
+    secure: LS/pUb4abY1rHSpGR0MahDy5j75+OXR83qfPWqyWtVOywBTcmvrl/mp3RGnaj4fy5TTs62tggYEAboQVwHKBSrb+5QZ6702Y2+BKeHnNLEJCwNXj2j6QNtfGeRyntT/EbYXGgHwMTdEAq/yLliz/p9nYMBEIDQjt+ikNO3Yv9w3LRD5aAluHkLbi2Nrh7ez9G6kOMC8fBBoRcXczujsCsOcp41g5dubGOLNwGTNMvF8CEUtM/EphNEay4xJZVw198pobXFsYVNYv9cxxSQPZQrZIQhhh+jUWdmYEhRpInQUqQDjXu8VxO5QSUZmQx4S+inBorc9MKh8MvbIo+vFAlaxhQ+WCCl2ZWC7wM03QA0Dqy6Rl5kNbz0JnNOZL+mdHEM8EosVtq1OJ226kzEYVU7v2+bj0FTbbIs5eYzxlNGmZdiVrk09cbOza81pV7Q3gV6jvINGHOmncDvW93rlYJYgK/Kj0JkDrolCLV5dOs7SRcragapWppM/4B3+5hjrZMQ+mdkQHYqI906+UHh7IBBJydatbu9jsWVQThphG39cnpqXd6Hm4FoFrVR49O9yfHbXZOO7z5HSKY7h9DU1jzEd1Cdu2LmxMNkKgJ/c8uQAG/Vm5CFWB9xL6Lndm3r7IZl4fazsFO5pwRIAt4vA+rd+iiW72uKBrqfVpg8BcciA=
+  app: shielded-fortress-39222
+  on:
+    repo: derekbrown/places-ui
