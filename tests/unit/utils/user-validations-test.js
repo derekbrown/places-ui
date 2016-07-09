@@ -1,4 +1,4 @@
-import { email, password, passwordConfirmation } from 'peepchat/utils/user-validations';
+import { email, password, passwordConfirmation } from 'places/utils/user-validations';
 import { module, test } from 'qunit';
 
 module('Unit | Utility | user validations');

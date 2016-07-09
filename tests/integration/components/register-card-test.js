@@ -9,5 +9,5 @@ test('it renders', function(assert) {
   this.render(hbs`{{register-card}}`);
 
   assert.equal(this.$().text().trim().replace(/[\s\n]+/g, ''),
-    'RegisterwithPlacesUsernamePasswordConfirmPassword');
+    'RegisterwithPlacesEmailPasswordConfirmPassword');
 });
