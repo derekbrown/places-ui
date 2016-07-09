@@ -18,6 +18,17 @@ module.exports = function(environment) {
       namespace: 'api'
     },
 
+    'ember-simple-auth': {
+     authenticationRoute: 'auth.login',
+     routeIfAlreadyAuthenticated: 'app.index',
+     routeAfterAuthentication: 'app.index'
+    },
+
+    flashMessageDefaults: {
+      timeout: 3000,
+      extendedTimeout: 375
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
