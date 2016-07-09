@@ -40,7 +40,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.DS.host = 'https://young-earth-12318.herokuapp.com';
+    ENV.DS.namespace = 'api';
   }
 
   return ENV;
