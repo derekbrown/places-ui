@@ -8,7 +8,7 @@ export default Route.extend({
   actions: {
     performLogin() {
       const user = this.get('currentModel');
-      this.get('session').authenticate('authenticator:places', user.email, user.password).then(() => {
+      this.get('session').authenticate('authenticator:savor', user.email, user.password).then(() => {
         this.get('flashMessages').success('Logged in!');
       }).catch((response) => {
         const { errors } = response;

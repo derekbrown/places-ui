@@ -1,7 +1,7 @@
 {
-  "name": "places",
+  "name": "savor",
   "version": "0.0.0",
-  "description": "Small description for places goes here",
+  "description": "Small description for savor goes here",
   "private": true,
   "directories": {
     "doc": "doc",
